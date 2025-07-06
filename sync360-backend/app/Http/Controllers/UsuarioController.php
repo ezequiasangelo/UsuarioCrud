@@ -9,7 +9,7 @@ class UsuarioController extends Controller
 {
     public function get()
     {
-        return Usuario::first(); // ou find(1) se quiser fixo
+        return Usuario::first();
     }
 
     public function save(Request $request)
