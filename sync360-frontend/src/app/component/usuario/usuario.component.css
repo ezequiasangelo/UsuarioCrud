@@ -1,0 +1,59 @@
+.mat-column-acoes {
+  text-align: right;
+}
+.container {
+  max-width: 1080px;
+  margin: 30px auto;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.search-bar {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.register-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 12px;
+}
+
+.user-img {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}

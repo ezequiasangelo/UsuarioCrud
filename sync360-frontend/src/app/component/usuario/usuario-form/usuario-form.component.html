@@ -1,0 +1,60 @@
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="usuario-form">
+
+    <div class="form-field">
+      <mat-label style="font-weight: 600; margin-bottom: 4px;">Foto de Perfil</mat-label>
+
+      <div class="custom-file-wrapper">
+        <input type="file" id="fileUpload" (change)="onFileSelected($event)" accept="image/*">
+        <label for="fileUpload" class="file-upload-button">Escolher arquivo</label>
+        <span class="file-upload-filename">{{ fileName || 'Nenhum arquivo escolhido' }}</span>
+      </div>
+
+      <div *ngIf="uploading" style="margin-top: 6px; font-size: 13px; color: #007bff;">
+        Enviando imagem...
+      </div>
+
+      <div *ngIf="uploadError" class="text-danger" style="margin-top: 6px; font-size: 13px;">
+        {{ uploadError }}
+      </div>
+
+      <div class="image-preview" *ngIf="imagePreview">
+        <img [src]="imagePreview" alt="Pré-visualização da imagem" />
+      </div>
+    </div>
+    
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Nome completo</mat-label>
+      <input matInput formControlName="nome_completo" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Idade</mat-label>
+      <input matInput type="number" formControlName="idade">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Rua</mat-label>
+      <input matInput formControlName="rua">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Bairro</mat-label>
+      <input matInput formControlName="bairro">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Estado</mat-label>
+      <input matInput formControlName="estado">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Biografia</mat-label>
+      <textarea matInput formControlName="biografia" rows="3"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+      Salvar
+    </button>
+  </form>
+</div>
