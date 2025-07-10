@@ -42,7 +42,7 @@ export class UsuarioService {
     return this.http.delete(`${this.apiBaseUrl}/usuario/${id}`);
   }
 
-  // Utilitário para salvar (criar ou atualizar automaticamente com base no ID)
+  
   saveUsuario(usuario: Usuario): Observable<any> {
     if (usuario.id) {
       return this.updateUsuario(usuario.id, usuario);
