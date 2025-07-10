@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('estado')->nullable();
             $table->text('biografia')->nullable();
             $table->string('imagem_perfil')->nullable();
-            $table->string('isDelete')->nullable();
+            $table->boolean('isDelete')->default(false);
             $table->timestamps();
         });
     }
